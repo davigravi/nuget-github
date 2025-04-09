@@ -20,6 +20,7 @@ jobs:
    - uses: jfrog/setup-jfrog-cli@v4
      with:
           oidc-provider-name: davidle-github
+          oidc-audience: github
      env:
        JF_URL: ${{ vars.ARTIFACTORY_URL }}
        #JF_PROJECT: ${{ vars.JF_PROJECT }} # optional variable
