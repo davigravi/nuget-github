@@ -31,9 +31,9 @@ jobs:
      env:
        JF_URL: ${{ vars.ARTIFACTORY_URL }}
        JF_ACCESS_TOKEN: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }} 
-     with:
-          oidc-provider-name: davidle-github
-          oidc-audience: github
+     #with:
+          #oidc-provider-name: davidle-github
+          #oidc-audience: github
 
 
 
