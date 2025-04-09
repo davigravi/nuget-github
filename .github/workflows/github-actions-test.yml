@@ -3,6 +3,8 @@ name: Push Build to Artifactory
 
 on: [push]
 
+permissions:
+  id-token: write
 
 jobs:
  build:
@@ -17,10 +19,10 @@ jobs:
    # This action sets up the JFrog CLI with Artifactory URL and    a predefined Artifactory oidc integration name
    - uses: jfrog/setup-jfrog-cli@v4
      with:
-          oidc-provider-name: <oidc integration name>
+          oidc-provider-name: davidle-github
      env:
        JF_URL: ${{ vars.ARTIFACTORY_URL }}
-       JF_PROJECT: ${{ vars.JF_PROJECT }} # optional variable
+       #JF_PROJECT: ${{ vars.JF_PROJECT }} # optional variable
 
       
    # This action sets up the JFrog CLI with the Artifactory URL and access token     
